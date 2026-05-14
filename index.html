@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ADEX9STUDIOS</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050505;
+  color: #fff;
+}
+
+/* BACKGROUND */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 45%),
+    radial-gradient(circle at bottom, rgba(255,255,255,0.05), transparent 55%),
+    linear-gradient(180deg, #050505, #000);
+  z-index: -1;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  padding: 14px;
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.15);
+  object-fit: cover;
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(255,255,255,0.05);
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin: 15px 0 5px;
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  margin: 5px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #ddd;
+}
+
+/* SECTIONS */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CARDS (NO 3D) */
+.card {
+  width: 270px;
+  padding: 25px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.07);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ICONS */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social a {
+  color: #fff;
+  font-size: 22px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  color: #000;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  animation: pulse 2s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<nav>
+  <h3>ADEX9STUDIOS</h3>
+</nav>
+
+<!-- HERO PAGE -->
+<section class="hero">
+  <img class="logo" src="https://ibb.co/4wMCzmqm" />
+  <h1>ADEX9STUDIOS</h1>
+  <p>Online services</p>
+
+  <div>
+    <a class="btn" href="#services">Explore Services</a>
+    <a class="btn" href="https://wa.me/201093763698">Contact</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="reveal">
+  <h2>About Me</h2>
+  <p>I am Adel Ehab, 22 years old, a Computer Science student.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="reveal">
+  <h2>Services</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Creating Portfolios</h3>
+      <a class="btn" href="https://adex9studios.vercel.app" target="_blank">View Example</a>
+      <br/>
+      <a class="btn" href="https://wa.me/201093763698" target="_blank">Order Now</a>
+    </div>
+
+    <div class="card">
+      <h3>AI Photoshoots</h3>
+      <a class="btn" href="https://www.instagram.com/p/DX6Rn0kjLH4/?igsh=MTZlZnd5NDV4NTFwcw==" target="_blank">View Example</a>
+      <br/>
+      <a class="btn" href="https://wa.me/201093763698" target="_blank">Order Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="reveal">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="card">AI Photoshoots</div>
+    <div class="card">ADEX9STUDIOS Website</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="reveal">
+  <h2>Contact</h2>
+  <a class="btn" href="https://wa.me/201093763698">Chat on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="social">
+    <a href="https://www.instagram.com/adex9studios"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/201093763698"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<!-- FLOAT -->
+<a class="whatsapp" href="https://wa.me/201093763698">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+window.addEventListener("scroll", function(){
+  document.querySelectorAll(".reveal").forEach(el => {
+    let top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
